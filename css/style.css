@@ -27,6 +27,7 @@ nav ul,nav{
 }
 nav ul li a{
     text-decoration: none;
+    color: black;
 }
 nav ul li{
     list-style-type: none;
@@ -36,5 +37,28 @@ nav ul li{
 
 nav ul li a:hover{
     color: red;
-    text-decoration: red;
+    text-decoration: underline red;
 }
+
+.breadcrumb ul{
+    list-style: none;
+    font-size: 20px;
+}
+
+.breadcrumb ul li{
+    display: inline-block;
+    margin: 5px;
+}
+.breadcrumb ul li:before{
+    content: "/\00a0";
+    padding-right: 10px;
+}
+.breadcrumb ul li a{
+    text-decoration: none;
+    color: black;
+}
+.breadcrumb ul li a:hover{
+    color: blue;
+    text-decoration:underline blue;
+}
+
