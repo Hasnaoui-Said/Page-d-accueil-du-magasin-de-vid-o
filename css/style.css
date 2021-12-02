@@ -4,9 +4,37 @@ body{
     padding: 0%;
 }
 
-header,nav,section,footer div{
-    background-color: blue;
-    margin: 2px;
-    padding: 20px;
-    text-align: center;
+nav{
+    width: 100%;
+}
+
+nav h1{
+    font-family: 'Courier New', monospace;
+    font: bolder;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 7px;
+}
+
+ul {
+    width: 90%;
+}
+nav ul,nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav ul li a{
+    text-decoration: none;
+}
+nav ul li{
+    list-style-type: none;
+    font-weight: bold;
+    padding: 1% ;
+}
+
+nav ul li a:hover{
+    color: red;
+    text-decoration: red;
 }
