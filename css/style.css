@@ -1,0 +1,12 @@
+body{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+header,nav,section,footer div{
+    background-color: blue;
+    margin: 2px;
+    padding: 20px;
+    text-align: center;
+}
