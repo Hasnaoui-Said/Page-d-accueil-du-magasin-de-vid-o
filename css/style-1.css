@@ -1,0 +1,36 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    background-color: black;
+    color: #fff;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+}
+
+.item{
+    list-style: none;
+    border: black solid 3px;
+    padding: 10px;
+    margin-left: -3px;
+}
+.item a{
+    text-decoration: none;
+    color:  black;
+}
+
+
+
+
+
+

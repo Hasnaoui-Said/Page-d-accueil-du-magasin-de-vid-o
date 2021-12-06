@@ -3,31 +3,35 @@ body{
     margin: 0%;
     padding: 0%;
 }
-
-nav{
-    width: 100%;
+.logo_bolc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-nav h1{
+.logo_bolc h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 70px;
     font-family: 'Courier New', monospace;
     font: bolder;
     background-color: black;
+    border-radius: 2px;
     color: rgb(255, 255, 255);
     padding: 7px;
 }
 
-ul {
-    width: 90%;
-}
-nav ul,nav{
+nav ul{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    padding: 0;
 }
 nav ul li a{
     text-decoration: none;
     color: black;
+    font-family: 'Roboto', sans-serif;
 }
 nav ul li{
     list-style-type: none;
@@ -36,37 +40,52 @@ nav ul li{
 }
 
 nav ul li a:hover{
-    color: red;
-    text-decoration: underline red;
+    color: rgb(76, 0, 255);
+    text-decoration: rgb(0, 17, 255);
 }
 
 .breadcrumb ul{
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
+    padding: 0;
 }
 
 .breadcrumb ul li{
     display: inline-block;
     margin: 5px;
 }
-.breadcrumb ul li:before{
-    content: "/\00a0";
-    padding-right: 10px;
+.breadcrumb ul li:not(:last-of-type)::after{
+    content: ">";
+    padding: 0 15px;
+    color: #cccccc;
+    font-family: 'Roboto', sans-serif;
 }
 .breadcrumb ul li a{
     text-decoration: none;
-    color: black;
+    color: #999999;
+    font-family: 'Roboto', sans-serif;
 }
 .breadcrumb ul li a:hover{
     color: blue;
     text-decoration:underline blue;
 }
+
+.infos{
+    margin: 10px;
+}
+
 .cartes{
     margin: 7px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .carte {
-    border: rgb(73, 67, 67) 2px solid;
+    border: rgb(158, 154, 154) 2px solid;
     margin: 3px;
 }
 .carte *{
@@ -78,9 +97,50 @@ nav ul li a:hover{
 }
 .image_product{
     background-color: rgb(125, 192, 247);
-    width: 180px;
-    height: 120px;
+    width: 320px;
+    height: 160px;
     text-align: center;
     font-size: 20px;
     padding-top: 100px;
+}
+@media screen and (min-width: 580px){
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .logo_bolc{
+        width: 20%;
+        
+    }
+    .nav ul{
+        width: 80%;
+    }
+    .breadcrumb ul{
+        justify-content: flex-start;
+        margin-left: 15px;
+    }
+    .image_product{
+        width: 260px;
+    }
+    .breadcrumb ul li:not(:last-of-type)::after{
+        content: "/";
+        padding: 0 15px;
+        color: #cccccc;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .breadcrumb{
+        display: none;
+    }
+}
+
+@media print{
+    nav ul{
+        display: none;
+    }
+    .breadcrumb{
+        display: none;
+    }
 }
